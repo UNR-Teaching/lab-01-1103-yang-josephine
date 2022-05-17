@@ -1,0 +1,25 @@
+3. The file "newfile.txt" was created in this directory. The ">" command probably means to run the ls command and save the results from that command into the file "newfile.txt".
+
+5. git status shows that there's a new change found and that file "newfile.txt" will be updated to my git branch later  (see below)
+--------------------------
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   newfile.txt
+---------------------------
+
+6. After running "git diff" command shows the difference between the committed "newfile.txt" with the newer version of the same file that has not been committed to git. The "+" sign in front of the first line of text "This is my file listing" shows that this line shows up in the newer (uncommitted) version of the file but was not in the older (committed) file. 
+--------------------------------
+diff --git a/newfile.txt b/newfile.txt
+index e74830d..8260412 100644
+--- a/newfile.txt
++++ b/newfile.txt
+@@ -1,3 +1,4 @@
++This is my file listing
+ _config.yml
+ newfile.txt
+ README.md
+
